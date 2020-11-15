@@ -37,11 +37,7 @@ const Create = ({checkForCaptain, addPirate}) => {
             .catch(err => {
                 if ( err.response === undefined){
                     navigate("/pirate");
-                } else {
-                console.log(err.response);
-                const { errors } = err.response.data;
-                setErrorMessages(Object.keys(errors).map(error => errors[error].message));
-                }
+                } 
             })
     }
 
